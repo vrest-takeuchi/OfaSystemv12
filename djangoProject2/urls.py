@@ -25,8 +25,8 @@ from django.conf.urls import url, include
 router = routers.DefaultRouter()
 router.register(r'anasummary', AnaSummaryViewSet)
 
-urlpatterns = [
+urlpatterns = (
     path('admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
-    path('ana_data/<int:param_equip_id>/<int:year>/<int:month>/<int:day>/<int:hour>/<int:minute>/<int:second>/',views.ana_data,name='ana_data'),
-]
+    # path('ana_data/',views.ana_data()),
+    url(r'^ana_data/', views.ana_data))
