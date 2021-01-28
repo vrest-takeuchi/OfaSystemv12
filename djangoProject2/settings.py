@@ -86,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ofa_system',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'vrest',
+        'PASSWORD': 'vrest',
         'PORT': '3306',
     },
     #connection_config1
@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'vrest',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT': '5432',
     },
