@@ -6,20 +6,20 @@ A_equip_id = 2  # 走行データの車体識別番号
 A_driving_course_id = 6  # 設定コースid
 """データベース設定※settings.pyのデータベース情報も変更必要"""
 conn = pymysql.connect(host='localhost',  # 測定値データホスト
-                       user='root',  # 測定値データユーザー名
-                       password='root',  # 測定値データパスワード
+                       user='vrest',  # 測定値データユーザー名
+                       password='vrest',  # 測定値データパスワード
                        db='ofa_system',  # 測定値データベース名
                        charset='utf8mb4',
                        cursorclass=pymysql.cursors.DictCursor)
 host_temp = 'localhost'  # 一時データホスト
 user_temp = 'postgres'  # 一時データユーザー名
-password_temp = 'vrest'  # 一時データパスワード
+password_temp = 'postgres'  # 一時データパスワード
 database_temp = 'postgres'  # 一時データデータベース名
 port_temp = '5432'  # 一時データポート番号
-connection_config2 = psycopg2.connect(host='localhost',  # MAPデータホスト
-                                      dbname='analysisdb',  # MAPデータベース名
-                                      user='postgres',  # MAPデータユーザー名
-                                      password='vrest')  # MAPデータパスワード
+connection_config2 = psycopg2.connect(host='124.146.154.219',  # MAPデータホスト
+                                      dbname='safety_mobility',  # MAPデータベース名
+                                      user=syssoft_admin',  # MAPデータユーザー名
+                                      password='Sk4gADca')  # MAPデータパスワード
 conn2 = psycopg2.connect(host=host_temp,
                          port=port_temp,
                          dbname=database_temp,
