@@ -17,10 +17,13 @@ class CategoryDetail(models.Model):
     id = models.BigIntegerField(primary_key=True)
     name = models.TextField(blank=True, null=True)
     detail = models.TextField(blank=True, null=True)
+    offpoint = models.BigIntegerField(blank=True, null=True)
+    evaluation_place = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'category_detail'
+
     #
     # def __str__(self):
     #     return str(self.name)
@@ -38,6 +41,16 @@ class OffpointDetail(models.Model):
     class Meta:
         managed = False
         db_table = 'offpoint_detail'
+
+class DjangoMigrations(models.Model):
+    app = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    applied = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_migrations'
+
 
 
 

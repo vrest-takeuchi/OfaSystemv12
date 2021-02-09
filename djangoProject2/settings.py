@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b!8#x6k&1p(fqc6h%r8(3pxs2nng=giigzg*k+1x#zfv^$%n$x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'output',
     'django_filters',
     'rest_framework',
+    'background_task',
+    'corsheaders',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
@@ -54,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'djangoProject2.urls'
@@ -76,7 +80,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangoProject2.wsgi.application'
-
+# MAX_ATTEMPTS=1
+# BACKGROUND_TASK_RUN_ASYNC = True
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
