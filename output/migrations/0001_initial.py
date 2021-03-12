@@ -61,8 +61,8 @@ class Migration(migrations.Migration):
                 ('measurement_date', models.DateTimeField(blank=True, null=True)),
                 ('offpoint', models.BigIntegerField(blank=True, null=True)),
                 ('offpoint_category', models.BigIntegerField(blank=True, null=True)),
-                ('evaluation_place', models.BigIntegerField(blank=True, null=True)),
-                ('block_no', models.BigIntegerField(blank=True, null=True)),
+                ('evaluation_place', models.CharField(max_length=255,blank=True, null=True)),
+                ('block_no', models.CharField(max_length=255,blank=True, null=True)),
             ],
             options={
                 'db_table': 'offpoint_detail',

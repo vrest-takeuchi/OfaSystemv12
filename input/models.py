@@ -367,6 +367,7 @@ class EquipStatusTbl(models.Model):
     operation_st = models.TextField()  # This field type is a guess.
     mqtt_st = models.TextField()  # This field type is a guess.
     device_st = models.TextField()  # This field type is a guess.
+    run_start_date = models.DateTimeField()
 
     class Meta:
         managed = False

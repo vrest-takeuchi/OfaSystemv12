@@ -432,6 +432,7 @@ class Migration(migrations.Migration):
                 ('operation_st', models.TextField()),
                 ('mqtt_st', models.TextField()),
                 ('device_st', models.TextField()),
+                ('run_start_date', models.DateTimeField()),
             ],
             options={
                 'db_table': 'equip_status_tbl',
